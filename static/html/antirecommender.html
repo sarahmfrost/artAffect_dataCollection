@@ -17,33 +17,26 @@
   <link href="/static/css/main.css" rel="stylesheet">
 
   <link rel="shortcut icon" type="image/png" href="/static/imgs/Toilets.png"/>
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
 </head>
 
 <body>
-
-<!--  <header>
-  <nav>
-    <a href="/">
-      <img class ="homeButton" src="/static/imgs/logo3.png">
-    </a>
-
-    <div id="burgerIcon" class="dropdown">
-      <a>
-        <img class ="burgerButton" src="/static/imgs/burger.png">
-      </a>
-
-      <div class="dropdownContent">
-        <a href="what.html">what is this?</a>
-        <a href="who.html">who are we?</a> <br>
-        <a href="why.html">why did we make this?</a>
-      </div>
-    </div>
-  </nav>
-</header> -->
-
-<!-- <div id="YouLike">
-  <h3>Do you like this?</h3>
-</div> -->
 
    <div id="likeThisDiv">
        <h3>How does this make you feel?</h3>
@@ -54,26 +47,18 @@
 
   <div id="painting1" class="grid-item grid-item-left"></div>
 
-    <div class="emoword-grid-container">
 
 <div id="col1">
-<button>Gratitude</button>
+<button id='emo1' draggable="true" ondragstart="drag(event)">Gratitude</button>
 <button>Happiness</button>
 <button> Humility </button>
 <button>Regret</button>
 <button>Arrogance</button>
-</div>
-
-<div id="col2">
 <button>Optimism</button>
 <button>Trust</button>
 <button>Anger </button>
 <button>Love</button>
 <button>Disagreeableness</button>
-
-</div>
-
-<div id="col3">
 
 <button> Disgust</button>
 <button>Fear</button>
@@ -85,80 +70,31 @@
 <button> Agreeableness </button>
 </div>
 
-
-
-
+<div id="col2" ondrop="drop(event)" ondragover="allowDrop(event)">
+<br>
 
 </div>
+
+
 
 <!-- <div>Anticipation</div>
 <div>Neutral</div> -->
 
   </div>
+<br>
+<br>
 
-  <div id= "text">
-
-
-<!--     <div id="likeButtonDiv">
-      <button id="likeButton"><img src="/static/imgs/like.png"></button>
-    </div>
-    <div id="likeButtonDiv">
-        <button id="dislikeButton"><img src="/static/imgs/dislike.png"></button> -->
+    <div id= "text">
       <div id="nextButtonDiv">
         <button id="nextButton">Next</button>
     </div>
 
-      <div id="submitButtonDiv">
-        <button id="submitButton">Finish</button>
-    </div>
-
-    </div>
-
-
-
-</div>
-
-<!-- loading gif while the network is running
-<div id="loading">
-  <img id="loading-image" src="/../static/imgs/ajax-loader.gif" alt="Loading..."/>
-</div> -->
-
-<div class="grid-container">
-
-  <img id="outputImage" class="grid-item grid-item-left">
-
-  <div id="textResult" class="grid-item grid-item-right">
-
-    <div id="wontlikeThisDiv">
-<!--        <h2>you're going to hate this.</h2>
- -->    </div>
-
-    <div id="paintingNameDiv">
-      <div id="newPaintingName">
-      </div>
-    </div>
-
-    <div id="newArtistPathDiv">
-      <div id="newArtistPath">
-      </div>
-    </div>
-
-    <div id="yearPaintingDiv">
-      <div id="yearOfPainting">
-      </div>
-    </div>
-
-    <a href="/">
-      <div id="startOverDiv">
-        <button  id="startOver">start over</button>
-      </div>
-    </a>
 
 
   </div>
 
 
-</div>
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"  crossorigin="anonymous"></script>

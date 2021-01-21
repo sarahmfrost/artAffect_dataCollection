@@ -126,7 +126,6 @@ margin-left: -7%;
 #likeThisDiv {
 /*background: blue;*/
  /*margin-left: 70%;*/
-  margin-top: 20%;
   margin-bottom: 10%
   /*text-align: left;*/
 }
@@ -156,11 +155,6 @@ margin-left: -7%;
 }
 
 
-/*#likeButtonDiv > button:hover {
-  cursor: pointer;
-  background-color: #FABD44;
-}*/
-
 
 #likeButtonDiv button img {
   width: 50%;
@@ -177,6 +171,16 @@ margin-left: -7%;
 
 }
 
+
+#nextButtonDiv {
+  margin: auto;
+  width: 50%;
+}
+
+#nextButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;}
 
 p{
 	font-size: 13px;
@@ -265,39 +269,6 @@ h3{
 
 /* Who are we? and Why? pages */
 
-.whoColumns{
-	column-count: 4;
-	margin-right:6%;
-	margin-left: 6%;
-
-}
-
-.whoColumns p{
-	text-align: justify;
-	margin-right:6%;
-	margin-left: 6%;
-}
-
-.whoColumns image{
-	text-align: center;
-	margin: 0;
-	padding: 0;
-	overflow-wrap: all;
-}
-
-.whatWhyColumns{
-	column-count: 1;
-	margin-right:6%;
-	margin-left: 6%;
-	margin-bottom: 6%;
-
-}
-
-.whatWhyColumns p{
-	text-align: justify;
-	margin-right:24%;
-	margin-left: 24%;
-}
 
 /*  Dropdowns */
 
@@ -340,7 +311,7 @@ h3{
 {
 	text-align: center;
 	display: grid;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: 30% 40% 30%;
 	padding: 0px;
 	clear: both;
 	width: 80vw;
@@ -380,23 +351,8 @@ h3{
 }
 
 
-.emoword-grid-container
-{
-	text-align: center;
-/*	border: 3px solid black;
-*/	display: grid;
-	grid-template-columns: auto auto auto;
-	/*grid-template-rows: auto auto auto auto auto auto;*/
-	padding: 10px;
-	clear: both;
-	width: 60vw;
-	margin: auto;
-	font-size: 40px;
-	/*justify-content: center;*/
 
-}
-
-#col1, #col2, #col3 {
+#col1, #col2 {
 	border: 1px solid rgba(0, 0, 0, 1.0);*/
 
 }
